@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Grocery List</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="grocery-section">
+    <div id="list-section">
+        <form id="new-list-form">
+            <input type="text" id="list-name-input" placeholder="List Name" />
+            <button type="submit" id="list-create-button">New List</button>
+        </form>
+        <div class="spacer"></div>
+        <form id="list-select-form">
+            <select id="list-name-select"></select>
+            <button type="submit" id="list-delete-button">Delete List</button>
+        </form>
+
+    </div>
+    <div id="item-buttons-section">
+        <form id="item-form">
+            <input class="input-area" type="text" id="item-input-name" placeholder="Item Name"/>
+            <input class="input-area" type="text" id="item-input-amount" placeholder="Amount"/>
+            <button type="submit" id="item-create-button">Add Item</button>
+        </form>
+    </div>
+    <div id="items-section">
+        <ul id="items-list">
+        </ul>
+    </div>
+</div>
+</body>
+</html>

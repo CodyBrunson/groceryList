@@ -1,0 +1,300 @@
+/* Style the main section (center and size it) */
+#grocery-section {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Make the child items stack vertically */
+    width: 75%; /* Takes 75% of the page width */
+    margin: 0 auto; /* Centers the section horizontally */
+    height: 90vh; /* Full viewport height */
+    border: 1px solid #000;
+}
+
+/* General Style for All Forms */
+form {
+    display: flex; /* Flexbox layout for inline alignment */
+    justify-content: center; /* Align elements horizontally */
+    align-items: center; /* Align elements vertically */
+    gap: 10px; /* Spacing between form elements */
+    width: 100%; /* Allow forms to stretch to full width by default */
+    margin: 10px auto; /* Center and add spacing above/below forms */
+}
+
+/* Input Styling (General Style for All Inputs) */
+input {
+    width: 30%; /* Default width for input elements */
+    padding: 6px; /* Inner padding for better usability */
+    font-size: 14px; /* Font size for text input */
+    border: 1px solid #ccc; /* Light border for input fields */
+    border-radius: 3px; /* Rounded input corners */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    margin: 0; /* Remove unnecessary margin for inline layout */
+    outline: none; /* Disable default browser outline */
+}
+
+/* Focused Input Styling */
+input:focus {
+    border-color: #007BFF; /* Blue border for focus state */
+    box-shadow: 0 0 4px #007BFF; /* Slight glow effect */
+}
+
+/* Parent Div: Center Children Horizontally and Vertically */
+#item-buttons-section {
+    display: flex; /* Enable Flexbox layout */
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Center children vertically */
+    height: 100vh; /* Take up full viewport height */
+    width: 100%; /* Full width for the container */
+    box-sizing: border-box; /* Ensure padding/border doesn’t affect dimensions */
+    margin: 0; /* Remove extra margins */
+    padding: 0; /* Remove default padding */
+}
+
+/* Form Layout for Item Form */
+#item-form {
+    display: flex; /* Flexbox for inline layout */
+    justify-content: space-between; /* Distribute space between inputs and button */
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add spacing between inputs and button */
+    width: 60%; /* Set a fixed width for the item form */
+    margin: 0 auto; /* Center the form horizontally inside the container */
+}
+
+/* Input Specific Styling */
+#item-input-name {
+    flex: 3 1 0; /* Take 3 parts out of a total 4 (3+1) */
+}
+
+#item-input-amount {
+    flex: 1 1 0; /* Take 1 part out of a total 4 (3+1) */
+}
+
+
+/* Button Styling (Inheriting Base Button Styles) */
+button {
+    width: 100px; /* Set a consistent button width */
+    height: 30px; /* Fixed height of the button */
+    flex-shrink: 0; /* Prevent button from shrinking */
+    padding: 6px; /* Padding for better usability */
+    font-size: 14px; /* Keep text size uniform */
+    border-radius: 3px; /* Rounded corners for buttons */
+    text-align: center; /* Center text inside the button */
+    color: #fff; /* White text for better contrast */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth transitions */
+}
+
+/* Button Specific for Item Form */
+#item-create-button {
+    background-color: #007BFF; /* Default button color */
+}
+
+#item-create-button:hover {
+    background-color: #0056b3; /* Darker blue shade on hover */
+}
+
+#item-create-button:active {
+    transform: scale(0.98); /* Slight shrink effect on click */
+}
+
+/* Spacer to control spacing between elements */
+.spacer {
+    height: 0; /* Adjust height as needed */
+    width: 100%;  /* Optional, for full width */
+}
+
+#list-section {
+    flex-basis: 10%; /* Keep height */
+    order: 1;
+    background-color: #555; /* Background color for the section */
+    border: 1px solid #000; /* Border around the section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Dropdown */
+#list-name-select {
+    width: 30%; /* Reduced width from 40% to 30% */
+    padding: 5px; /* Inner spacing for readability */
+    font-size: 14px; /* Font size for dropdown options */
+    border-radius: 3px; /* Rounded corners */
+}
+
+/* Form container for the new list input */
+#new-list-form {
+    display: flex; /* Flexbox layout for input and button */
+    justify-content: center; /* Align content horizontally */
+    align-items: center; /* Align content vertically */
+    width: 30%; /* Keeps form consistent in width */
+    gap: 6px; /* Space between elements */
+}
+
+/* Form container for the list select dropdown and delete button */
+#list-select-form {
+    display: flex; /* Flexbox layout for dropdown and delete button */
+    justify-content: center; /* Align content horizontally */
+    align-items: center; /* Align content vertically */
+    width: 30%; /* Keeps form consistent in width */
+    gap: 6px; /* Space between dropdown and button */
+}
+
+/* Create button styling */
+#list-create-button {
+    flex-shrink: 0; /* Prevent button from shrinking */
+    padding: 6px 12px; /* Padding for size and click area */
+    font-size: 14px; /* Font size for button text */
+    border-radius: 3px; /* Rounded corners */
+    background-color: #007BFF; /* Default button color */
+    color: #fff; /* White text for contrast */
+    border: none; /* Removes default border */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#list-create-button:hover {
+    background-color: #0056b3; /* Change color on hover */
+}
+
+/* Delete button styling (same as list-create-button) */
+#list-delete-button {
+    flex-shrink: 0; /* Prevent button from shrinking */
+    padding: 6px 12px; /* Same padding as create button */
+    font-size: 14px; /* Same font size */
+    border-radius: 3px; /* Rounded corners for consistency */
+    background-color: #dc3545; /* Red background for delete button */
+    color: #fff; /* White text for contrast */
+    border: none; /* Removes default border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+#list-delete-button:hover {
+    background-color: #b02a37; /* Darker red on hover */
+}
+
+/* Style for the item buttons section (another 10% height after list-section) */
+#item-buttons-section {
+    flex-basis: 10%; /* Takes 10% of the height */
+    order: 2; /* Position it second */
+    background-color: #777; /* Lighter gray for differentiation */
+    border: 1px solid #000;
+}
+
+/* Style for the items section (80% of the remaining height, positioned last) */
+#items-section {
+    flex-basis: 80%; /* Takes 80% of the height */
+    order: 3; /* Position it third */
+    background-color: #999; /* Even lighter gray */
+    border: 1px solid #000;
+    display: flex; /* Flexbox for easier centering */
+    justify-content: center; /* Horizontally center the items-list */
+    align-items: flex-start; /* Align items at the top (no vertical centering) */
+    padding: 10px; /* Optional: Remove unnecessary padding */
+}
+
+/* Items List (Align at the Center) */
+#items-list {
+    list-style-type: none; /* Remove default bullets of the list */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding to avoid gaps */
+    width: 50%; /* Control the width of the list */
+    border: 0px solid #ccc; /* Optional: Add a border around the list */
+    border-radius: 5px; /* Optional: Rounded corners for the list */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for depth */
+    background-color: #f9f9f9; /* Optional: Light background color for distinction */
+}
+
+/* Style Individual List Items */
+#items-list li#item-desc {
+    padding: 10px 15px; /* Add padding inside each list item */
+    font-size: 16px; /* Adjust font size for readability */
+    font-weight: 400; /* Normal font weight */
+    color: #333; /* Dark gray text for visibility */
+    border-bottom: 1px solid #ddd; /* Add a bottom border */
+}
+
+/* Style Individual List Items */
+#items-list li#item-desc {
+    padding: 10px 15px; /* Add padding inside each list item */
+    font-size: 16px; /* Adjust font size for readability */
+    font-weight: 400; /* Normal font weight */
+    color: #333; /* Dark gray text for visibility */
+    border-bottom: 1px solid #ddd; /* Add a bottom border */
+    background-color: transparent; /* Transparent background */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#items-list li#item-desc:last-child {
+    border-bottom: none; /* Remove bottom border on the last item */
+}
+
+/* Optional: Hover Effect for List Items */
+#items-list li#item-desc:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Light grayish transparent effect on hover */
+    cursor: pointer; /* Pointer for designated interactivity */
+}
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.4); /* Black, with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    margin: 15% auto; /* Center horizontally and vertically */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Adjust width as needed */
+    text-align: center; /* Center content */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Modal Form Inputs */
+#modal-form input {
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#modal-form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#modal-form button:hover {
+    background-color: #0056b3;
+}
+
+

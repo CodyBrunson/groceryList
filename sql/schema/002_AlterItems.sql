@@ -1,0 +1,14 @@
+-- +goose Up
+CREATE TABLE lists (
+id UUID PRIMARY KEY,
+created_at TIMESTAMP NOT NULL,
+updated_at TIMESTAMP NOT NULL,
+deleted_at TIMESTAMP,
+name TEXT NOT NULL
+);
+
+ALTER TABLE items ADD COLUMN list_id UUID NOT NULL REFERENCES lists(id) ON DELETE CASCADE;
+
+-- +goose Down
+DROP TABLE lists;
+ALTER TABLE items DROP COLUMN list_id;
